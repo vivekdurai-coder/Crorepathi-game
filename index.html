@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+    
+</head>
+<body>
+
+
+
+    <div id="app">
+      <h1 v-on:click="number++" :style="{color: color, fontSize: fontS+'px'}">{{number}}</h1>  
+      <h1 v-on:click="number--">Decrease</h1>
+      <h1 v-on:click="fontS++">Increase the size of font</h1>
+      <button v-on:click="colorChange()">Change Color</button>
+      
+    
+    </div>
+
+
+    <script>
+    
+        new Vue({
+            el: "#app",
+            data: {
+                number: 0,
+                color: "yellow",
+                fontS: 50
+
+            },
+            methods: {
+                colorChange(){
+                    this.color = "red"
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
